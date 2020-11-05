@@ -1,0 +1,14 @@
+<?php
+/** @var $block \Marcinkwiatkowski\HeroBanner\Block\Widget\HeroBanner */
+/** @var $escaper \Magento\Framework\Escaper */
+?>
+
+<div class="hero-block">
+    <figure class="hero-block__figure">
+        <img class="hero-block__image" src="<?= $escaper->escapeHtml($block->getHeroImage()) ?>" alt="figure">
+    </figure>
+    <section class="hero-block__tape">
+        <h2 class="hero-block__heading"><?= $escaper->escapeHtml($block->getHeadingText()); ?></h2>
+        <a href="<?= $block->getButtonUrl(); ?>" class="hero-block__action"><?= $escaper->escapeHtml($block->getButtonText()); ?></a>
+    </section>
+</div>

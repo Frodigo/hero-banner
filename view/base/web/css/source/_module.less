@@ -1,0 +1,71 @@
+/**
+ * @copyright Copyright (C) Marcin Kwiatkowski (http://marcin-kwiatkowski.com)
+ */
+
+//
+//  Variables
+//  _____________________________________________
+
+@hero-overlay__bg: rgba(65, 65, 65, 0.65);
+@here-padding-base: 15px;
+@hero-padding-lg: 30px;
+@font-size-base-mobile: 20px;
+@hero-color-white: #fff;
+@hero-color-black: #000;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .hero-block {
+        position: relative;
+
+        &__figure {
+            margin: 0;
+            position: relative;
+            z-index: 0;
+        }
+
+        &__image {
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+
+        &__tape {
+            align-items: center;
+            background-color: @hero-overlay__bg;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            left: 0;
+            padding: @here-padding-base;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+
+        &__heading {
+            color: @hero-color-white;
+            margin: 0;
+            font-size: @font-size-base-mobile;
+            font-weight: 700;
+            line-height: 28px;
+        }
+
+        &__action {
+            background-color: @hero-color-white;
+            color: @hero-color-black;
+            font-size: @font-size-base-mobile;
+            padding: @here-padding-base @hero-padding-lg;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (C) Marcin Kwiatkowski (http://marcin-kwiatkowski.com)
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="Marcinkwiatkowski\HeroBanner\Block\Widget\HeroBanner" id="hero-banner">
+        <label>Hero Banner</label>
+        <description>Hero banner widget</description>
+        <parameters>
+            <parameter name="heading_text" sort_order="10" visible="true" xsi:type="text">
+                <label>Heading text</label>
+            </parameter>
+            <parameter name="button_text" sort_order="20" visible="true" xsi:type="text">
+                <label>Button text</label>
+            </parameter>
+            <parameter name="button_url" sort_order="20" visible="true" xsi:type="text">
+                <label>Button url</label>
+            </parameter>
+            <parameter name="image" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Image</label>
+                <description translate="true">Hero image</description>
+                <block class="Marcinkwiatkowski\HeroBanner\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
