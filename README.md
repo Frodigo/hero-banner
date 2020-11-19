@@ -19,6 +19,8 @@ Note: The above instruction also applies to CMS blocks.
 
 ## Installation
 
+`composer require marcinkwiatkowski/hero-banner`
+
 ## Magento platform compatibility
 
 Open Source (CE): 2.3.x, 2.4.x
